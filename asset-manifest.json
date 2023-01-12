@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ykk2.github.io/static/css/main.be41ae91.css",
+    "main.js": "/ykk2.github.io/static/js/main.610f4bf8.js",
+    "static/media/Rubik-Regular.ttf": "/ykk2.github.io/static/media/Rubik-Regular.705a89f52bdf93b960ed.ttf",
+    "static/media/Rubik-SemiBold.ttf": "/ykk2.github.io/static/media/Rubik-SemiBold.4bc5c511d3be812971dc.ttf",
+    "static/media/Rubik-Black.ttf": "/ykk2.github.io/static/media/Rubik-Black.dfebf224e7d950b7cd61.ttf",
+    "static/media/Rubik-Light.ttf": "/ykk2.github.io/static/media/Rubik-Light.b269c92bc326f0d43f54.ttf",
+    "static/media/GravitasOne-Regular.ttf": "/ykk2.github.io/static/media/GravitasOne-Regular.7f2a405a3aa34ea1d27f.ttf",
+    "static/media/angellist-svgrepo-com.svg": "/ykk2.github.io/static/media/angellist-svgrepo-com.92af20527a01a5b16d062ec0452d8123.svg",
+    "static/media/iconmonstr-github-1.svg": "/ykk2.github.io/static/media/iconmonstr-github-1.04be58c17b3d5e9744424d414240dd85.svg",
+    "static/media/double-down.svg": "/ykk2.github.io/static/media/double-down.f8b938083bca1d25927c29caa5e57956.svg",
+    "static/media/double-up.svg": "/ykk2.github.io/static/media/double-up.4fa18dffa72b54db17f6f36cca64df78.svg",
+    "index.html": "/ykk2.github.io/index.html",
+    "static/media/iconmonstr-linkedin-3.svg": "/ykk2.github.io/static/media/iconmonstr-linkedin-3.27a3f479ca1bbb0ceef19e395081fb94.svg",
+    "static/media/up-arrow.svg": "/ykk2.github.io/static/media/up-arrow.cdf9265b39637bf2a07efd6e15cb4dd2.svg",
+    "static/media/down-arrow.svg": "/ykk2.github.io/static/media/down-arrow.9b60b00a77d905cbdb9955170236f11c.svg",
+    "main.be41ae91.css.map": "/ykk2.github.io/static/css/main.be41ae91.css.map",
+    "main.610f4bf8.js.map": "/ykk2.github.io/static/js/main.610f4bf8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be41ae91.css",
+    "static/js/main.610f4bf8.js"
+  ]
+}
