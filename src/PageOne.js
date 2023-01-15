@@ -36,6 +36,9 @@ export const PageOne = () => {
                     <div id="name">
                         Kwon
                     </div>
+                    <span id="contact-info">
+                        <span>richardkwon5@gmail.com </span><span>| 408 &#x2022; 963 &#x2022; 7045</span>
+                    </span>
                 </div>
             </div>
             <div className="right">
@@ -53,7 +56,7 @@ export const PageOne = () => {
                 <span>I'm a full-stack developer with retail, restaurant, and commercial real estate experience.
                       I feel alive when I'm solving problems and appreciate the knowledge gained from the process.</span>
                 <span>Currently I'm looking for a junior developer role where I can learn and contribute. </span>
-                <span>If you wish to contact me, please do so at the bottom of this site.</span>
+                <span>If you wish to contact me, please do so at the bottom of this site!</span>
             </div>
         </div>
     )
