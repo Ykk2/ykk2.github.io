@@ -94,9 +94,10 @@ a {
 
 .One {
   display: flex;
+  position: relative;
   flex-direction: row;
   align-items: center;
-  background-color: rgb(58, 63, 68);
+  background-color: rgb(0, 132, 255);
 }
 
 .Two {
@@ -129,7 +130,7 @@ a {
 }
 
 .left {
-  border-right: 1px solid gray;
+  border-right: 1px solid rgb(255, 255, 255);
   height: 100%;
   width: 50%;
   display: flex;
@@ -275,9 +276,8 @@ a {
   flex-direction: column;
   width: 40px;
   margin-right: 2vw;
-  background-color: rgba(255, 255, 255, 0.049);
+  background-color: rgba(255, 255, 255, 0.339);
   border-radius: 45px;
-
   transition-duration: 0.35s;
   -webkit-transition-duration: 0.35s;
 }
@@ -287,7 +287,7 @@ a {
   padding-bottom: 6px;
   height: 30px;
   width: 40px;
-  filter: invert(40%) sepia(400%) saturate(2%) hue-rotate(238deg) brightness(100%) contrast(80%);
+  filter: invert(80%) sepia(0%) saturate(2%) hue-rotate(238deg) brightness(100%) contrast(80%);
   cursor: pointer;
   transition-duration: 0.35s;
   -webkit-transition-duration: 0.35s;
@@ -299,7 +299,7 @@ a {
 
 
 #nav-icons:hover {
-  filter: invert(80%) sepia(0%) saturate(2%) hue-rotate(238deg) brightness(100%) contrast(100%);
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(238deg) brightness(100%) contrast(100%);
 }
 
 #nav-icons:active {
@@ -481,6 +481,11 @@ iframe {
   cursor: pointer;
 }
 
+.preview-links:active {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
 .project-links > a {
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
@@ -488,4 +493,115 @@ iframe {
 
 .project-links > a:hover {
   color: rgb(254, 88, 88)
+}
+
+.project-links > a:active {
+  color: rgb(255, 255, 255)
+}
+
+.bio {
+  position: absolute;
+  top: 28%;
+  right: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  width: 20vw;
+  height: 18vw;
+  padding: 2%;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.116);
+  font-family: Rubik-Light;
+  font-size: 0.8vw;
+  letter-spacing: 1px;
+}
+
+.bio > span {
+  padding-bottom: 3%;
+
+}
+
+.bio > span:nth-child(1)  {
+  font-weight: bold;
+  align-self: center;
+}
+
+
+.bio > span:nth-child(2)  {
+  font-weight: bold;
+  align-self: center;
+  padding-bottom: 5%;
+}
+
+.x {
+  position: absolute;
+  top: 2%;
+  right: 2%;;
+  width: 2vw;
+  height: 2vw;
+  filter: invert(90%) sepia(0%) saturate(2%) hue-rotate(238deg) brightness(80%) contrast(80%);
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+}
+
+.x:hover {
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(238deg) brightness(100%) contrast(100%);
+  cursor: pointer;
+}
+
+.x:active {
+  filter: invert(70%) sepia(0%) saturate(2%) hue-rotate(238deg) brightness(40%) contrast(100%);
+}
+
+.close-bio {
+  position: absolute;
+  top: 28%;
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  width: 20vw;
+  height: 18vw;
+  padding: 2%;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.116);
+  font-family: Rubik-Light;
+  font-size: 0.8vw;
+  letter-spacing: 1px;
+}
+
+
+.close-bio > span {
+  padding-bottom: 3%;
+
+}
+
+.close-bio > span:nth-child(1)  {
+  font-weight: bold;
+  align-self: center;
+}
+
+
+.close-bio > span:nth-child(2)  {
+  font-weight: bold;
+  align-self: center;
+  padding-bottom: 5%;
+}
+
+.One > div:nth-child(3) {
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+}
+
+.One > .left > div > div {
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+}
+
+.One > .left > div > div:hover {
+  cursor: pointer;
+  box-shadow: inset 10em 1em gold;
+  border-radius: 14px;
 }
