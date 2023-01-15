@@ -29,6 +29,29 @@
   url("./Fonts/Rubik-SemiBold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family:"Roboto-Black";
+  src: local("bold"),
+  url("./Fonts/Roboto-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"Roboto-Light";
+  src: local("bold"),
+  url("./Fonts/Roboto-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"Roboto-Regular";
+  src: local("bold"),
+  url("./Fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"Roboto-Thin";
+  src: local("bold"),
+  url("./Fonts/Roboto-Thin.ttf") format("truetype");
+}
 
 * {
   -webkit-user-select: none; /* Safari */
@@ -56,6 +79,8 @@ a {
   text-decoration: none;
   color: rgb(152, 208, 226);
 }
+
+
 
 
 .app {
@@ -102,8 +127,8 @@ a {
 }
 
 .Five {
-  background-color: black;
-  /* background-image: linear-gradient(to right top,rgba(0,0,0,1) 11%, rgba(4,3,61,1) 25%, rgba(48,5,85,1) 39%, rgba(82,23,120,1) 51%, rgba(98,9,121,1) 64%, rgba(151,7,134,1) 75%, rgba(191,4,100,1) 87%, rgba(255,0,0,1) 100%); */
+  position: relative;
+  background-image: linear-gradient(to right top,rgba(0,0,0,1) 11%, rgba(4,3,61,1) 25%, rgba(48,5,85,1) 39%, rgba(82,23,120,1) 51%, rgba(98,9,121,1) 64%, rgba(151,7,134,1) 75%, rgba(191,4,100,1) 87%, rgba(255,0,0,1) 100%);
 }
 
 .left {
@@ -119,7 +144,6 @@ a {
 }
 
 .right {
-
   height: 100%;
   width: 50%;
   display: flex;
@@ -127,7 +151,6 @@ a {
   align-items: flex-start;
   justify-content: flex-start;
   padding-left: 2vw;
-  z-index: 88;
 }
 
 .left-stuff {
@@ -173,16 +196,34 @@ a {
   padding-left: 1vw;
   position: absolute;
   right: -1vw;
-  font-size: 0.7vw;
+  font-size: 0.65vw;
   color: white;
 }
 
-.right-stuff-items {
-  position: relative;
+.right-stuff-items-container {
   width: 150%;
+  margin-bottom: 1vw;
+  position: relative;
+  height: 110%;
+}
+
+.right-stuff-items-a {
+  position: relative;
+  width: 100%;
   font-size: 1vw;
-  padding-bottom: 1vw;
   color: white;
+  z-index: 93;
+  background: linear-gradient(90deg, #0F1111 68%, transparent 32%)
+}
+
+.right-stuff-items {
+  padding-top: 4%;
+  padding-bottom: 4%;
+  position: relative;
+  width: 100%;
+  font-size: 1vw;
+  color: white;
+  z-index: 93;
 }
 
 .right-stuff-items div:nth-child(3){
@@ -196,16 +237,16 @@ a {
   font-size: 0.7vw;
 }
 
+.right-stuff-items-a div:nth-child(3){
+  font-size: 0.8vw;
+  padding-top: 0.2vw;
+  padding-bottom: 0.2vw;
+}
 
-
-
-
-
-
-
-
-
-
+.right-stuff-items-a div:nth-child(4){
+  font-family: Rubik-Light;
+  font-size: 0.7vw;
+}
 
 
 
@@ -219,7 +260,7 @@ a {
   margin-right: 2vw;
   background-color: rgba(255, 255, 255, 0.049);
   border-radius: 45px;
-  z-index: 99;
+
   transition-duration: 0.35s;
   -webkit-transition-duration: 0.35s;
 }
@@ -302,35 +343,64 @@ a {
 }
 
 
-
-.thermos {
-  filter: invert(80%) sepia(0%) saturate(2%) hue-rotate(238deg) brightness(100%) contrast(100%);
-  width: 5vw;
-  height: 5vw;
-  position: absolute;
-  left: 100px;
-  rotate: 45deg;
-
-}
-
+/* sibling z-index 93 */
 
 .cocktail {
-  width: 5vw;
-  height: 5vw;
-  color: gray;
+  width: 2.5vw;
+  height: 2.5vw;
+  position: absolute;
+  right: 32%;
+  bottom: 0;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+  z-index: 92;
+  animation: 3s linear backin
 }
 
-.cocktail:hover {
-  animation: makeItfadeIn 3s 1s forwards;
+
+.right-stuff-items-a:hover + img {
+  -webkit-animation: 1s slideout  linear;
+  animation: 1s slideout  linear;
+  animation-fill-mode: forwards;
 }
 
-@keyframes makeItfadeIn {
+@keyframes slideout {
 
   0% {
-    background-color: bottom;
+    -webkit-transform: translate(0%, 0);
+  }
+  25% {
+    -webkit-transform: translate(60%, 0);
+  }
+  50% {
+    -webkit-transform: translate(120%, 0);
+  }
+  75% {
+    -webkit-transform: translate(170%, 0);
   }
   100% {
-    background-position: top;
+    -webkit-transform: translate(180%, 0);
+  }
+}
+
+@keyframes backin {
+
+  0% {
+    -webkit-transform: translate(180%, 0);
+  }
+  25% {
+    -webkit-transform: translate(170%, 0);
+  }
+  50% {
+    -webkit-transform: translate(120%, 0);
+  }
+  75% {
+    -webkit-transform: translate(60%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0);
   }
 }
 
@@ -339,7 +409,6 @@ a {
 
 
 iframe {
-  position: absolute;
   height: 100vh;
   width: 50vw;
   background-color: white;

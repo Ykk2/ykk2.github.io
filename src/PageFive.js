@@ -1,15 +1,12 @@
-import cocktail from './cocktail.png'
-
+import ContactForm from "./ContactForm";
 
 
 export const PageFive = () => {
 
+
     return (
         <div className="Page Five">
-            <img className="thermos" />
-            <img className="cocktail" src={cocktail} />
-
-
+            <ContactForm />
         </div>
 
     )
