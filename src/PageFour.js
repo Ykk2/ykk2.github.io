@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
 
 export const PageFour = () => {
@@ -99,13 +99,15 @@ export const PageFour = () => {
         }
     }
 
-    const handleExitClick = (e) => {
-        e.preventDefault()
-        setHide(true)
-    }
+    // const handleExitClick = (e) => {
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     setHide(true)
+    // }
 
     return (
-        <div className="Page Four" onClick={handleExitClick}>
+        <div className="Page Four">
+        {/* <div className="Page Four" onClick={handleExitClick}> */}
             <div className="left">
                 <div className="left-stuff">
                     <div id="left-title">
@@ -115,26 +117,26 @@ export const PageFour = () => {
             </div>
             <div className="right">
                 <div className="right-stuff">
-                    <div onClick={handleUTubeClick} className="right-stuff-items">
-                        <span id="title">uTube</span>
+                    <div className="right-stuff-items">
+                        <span  onClick={handleUTubeClick} className="preview-links">uTube</span>
                         <div>YouTube clone</div>
-                        <div><a href="https://utube-bbn0.onrender.com/" target="_blank" rel="noreferrer">Project link</a>&nbsp;&nbsp;<a href="https://www.youtube.com/" target="_blank" rel="noreferrer">Original Site</a></div>
+                        <div className="project-links"><a href="https://utube-bbn0.onrender.com/" target="_blank" rel="noreferrer">Project link</a>&nbsp;&nbsp;<a href="https://www.youtube.com/" target="_blank" rel="noreferrer">Original Site</a>&nbsp;&nbsp;<a href="https://github.com/Ykk2/YouTube-Clone" target="_blank" rel="noreferrer">GitHub</a></div>
                     </div>
-                    <div onClick={handleHardClick} className="right-stuff-items">
-                        <span id="title">Hard</span>
+                    <div className="right-stuff-items">
+                        <span onClick={handleHardClick} className="preview-links">Hard</span>
                         <div>Medium clone</div>
-                        <div><a href="https://hard.onrender.com/" target="_blank" rel="noreferrer">Project link</a>&nbsp;&nbsp;<a href="https://medium.com/" target="_blank" rel="noreferrer">Original Site</a></div>
+                        <div className="project-links"><a href="https://hard.onrender.com/" target="_blank" rel="noreferrer">Project link</a>&nbsp;&nbsp;<a href="https://medium.com/" target="_blank" rel="noreferrer">Original Site</a>&nbsp;&nbsp;<a href="https://github.com/Ykk2/medium-clone" target="_blank" rel="noreferrer">GitHub</a></div>
                     </div>
-                    <div onClick={handleBnBClick} className="right-stuff-items">
-                        <span id="title">BnB</span>
+                    <div className="right-stuff-items">
+                        <span onClick={handleBnBClick} className="preview-links">BnB</span>
                         <div>AirBnB clone</div>
-                        <div><a href="https://bnb-cdd6.onrender.com" target="_blank" rel="noreferrer">Project link</a>&nbsp;&nbsp;<a href="https://www.airbnb.com/" target="_blank" rel="noreferrer">Original Site</a></div>
+                        <div className="project-links"><a href="https://bnb-cdd6.onrender.com" target="_blank" rel="noreferrer">Project link</a>&nbsp;&nbsp;<a href="https://www.airbnb.com/" target="_blank" rel="noreferrer">Original Site</a>&nbsp;&nbsp;<a href="https://github.com/Ykk2/AirBnB-clone" target="_blank" rel="noreferrer">GitHub</a></div>
                     </div>
                 </div>
                 <div className={`preview-container ${hide ? "hide" : "show"}`}>
                     <iframe
                         title="preview"
-                        src={source}>
+                        src={source ? source : undefined}>
                     </iframe>
                 </div>
             </div>

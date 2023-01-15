@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser'
 import "./contactform.css"
 
 
-export const ContactForm = () => {
+export const ContactForm = ({sent, setSent}) => {
 
 
     const form = useRef();
@@ -19,17 +19,18 @@ export const ContactForm = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-
-        // emailjs.sendForm('service_ad2aruo', 'template_81u96x8', form.current, 'aI6AYybRCmdVoLrR2')
-        //     .then((result) => {
-        //         console.log(result.text);
-        //     }, (error) => {
-        //         console.log(error.text);
-        //     });
+        emailjs.sendForm('service_ad2aruo', 'template_81u96x8', form.current, 'aI6AYybRCmdVoLrR2')
+            .then((result) => {
+                setSent(true)
+                console.log(result.text);
+            }, (error) => {
+                setSent(true)
+                console.log(error.text);
+            });
     };
 
     return (
-            <form ref={form} onSubmit={sendEmail}>
+            <form className={sent ? "sent" : ""} ref={form} onSubmit={sendEmail}>
                 <div id="contact-form-title">Send me a message</div>
                 <div>
                     <label>Name:</label>
@@ -44,7 +45,7 @@ export const ContactForm = () => {
                           name="message"
                           onChange={updateComment}
                           maxLength='500' />
-                <input id="submit" type="submit" value="Send" />
+                <input id="submit" type="submit" value={sent? "Sent!" : "Send"}/>
             </form>
     )
 }

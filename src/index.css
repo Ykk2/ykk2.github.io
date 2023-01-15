@@ -77,10 +77,8 @@ body {
 
 a {
   text-decoration: none;
-  color: rgb(152, 208, 226);
+  color: rgb(117, 203, 232);
 }
-
-
 
 
 .app {
@@ -123,12 +121,11 @@ a {
   align-items: center;
   background-color:rgb(37, 42, 42);
   position: relative;
-
 }
 
 .Five {
   position: relative;
-  background-image: linear-gradient(to right top,rgba(0,0,0,1) 11%, rgba(4,3,61,1) 25%, rgba(48,5,85,1) 39%, rgba(82,23,120,1) 51%, rgba(98,9,121,1) 64%, rgba(151,7,134,1) 75%, rgba(191,4,100,1) 87%, rgba(255,0,0,1) 100%);
+  background-image: linear-gradient(to left bottom,rgba(0,0,0,1) 11%, rgba(4,3,61,1) 25%, rgba(48,5,85,1) 39%, rgba(82,23,120,1) 51%, rgba(98,9,121,1) 64%, rgba(151,7,134,1) 75%, rgba(191,4,100,1) 87%, rgba(255,0,0,1) 100%);
 }
 
 .left {
@@ -171,8 +168,28 @@ a {
 
 #name {
   font-size: 6vw;
-  color: white;
+  color: rgb(255, 255, 255);
 }
+
+/* .left-stuff {
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s
+}
+
+.left-stuff:hover {
+  background-image: linear-gradient(to right,rgb(255, 255, 255) 11%, rgb(255, 255, 255) 25%, rgb(123, 123, 123) 51%, rgb(255, 255, 255) 64%, rgb(255, 255, 255) 75%, rgb(255, 255, 255) 87%, rgb(255, 255, 255) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-animation 4s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rainbow-animation {
+  to {
+      background-position: 400vh;
+  }
+} */
 
 #page-one-icons {
   padding-top: 0.7vw;
@@ -297,7 +314,7 @@ a {
 }
 
 .angel-list:hover {
-  filter: invert(80%) sepia(0%) saturate(2%) hue-rotate(238deg) brightness(100%) contrast(100%);
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(238deg) brightness(100%) contrast(100%);
   -webkit-animation: rotation 0.2s 2 linear;
   animation: rotation 0.2s 2 linear;
 }
@@ -328,7 +345,7 @@ a {
 }
 
 .git-hub:hover {
-  filter: invert(80%) sepia(0%) saturate(2%) hue-rotate(238deg) brightness(100%) contrast(100%);
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(238deg) brightness(100%) contrast(100%);
   transition: all 1.5s ease;
 }
 
@@ -338,7 +355,7 @@ a {
 }
 
 .linked-in:hover {
-  filter: invert(80%) sepia(0%) saturate(2%) hue-rotate(238deg) brightness(100%) contrast(100%);
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(238deg) brightness(100%) contrast(100%);
   transition: all 1.5s ease;
 }
 
@@ -439,4 +456,36 @@ iframe {
   -o-transform: translate(200%, 0);
   -ms-transform: translate(200%, 0);
   transform: translate(200%, 0)
+}
+
+.Play {
+  background-image: linear-gradient(to left bottom,rgba(0,0,0,1) 11%, rgba(4,3,61,1) 25%, rgba(48,5,85,1) 39%, rgba(82,23,120,1) 51%, rgba(98,9,121,1) 64%, rgba(151,7,134,1) 75%, rgba(191,4,100,1) 87%, rgba(255,0,0,1) 100%);
+  /* animation: rainbow-animation 1s linear infinite; */
+}
+
+/* @keyframes rainbow-animation {
+  to {
+      background-position: 4500vh;
+  }
+} */
+
+.preview-links {
+  font-family: Rubik-SemiBold;
+  color: white;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+}
+
+.preview-links:hover {
+  color: rgb(95, 188, 238);
+  cursor: pointer;
+}
+
+.project-links > a {
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+}
+
+.project-links > a:hover {
+  color: rgb(254, 88, 88)
 }

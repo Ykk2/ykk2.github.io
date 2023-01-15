@@ -1,12 +1,13 @@
 import ContactForm from "./ContactForm";
-
+import { useState } from "react";
 
 export const PageFive = () => {
 
+const [sent, setSent] = useState(false)
 
     return (
-        <div className="Page Five">
-            <ContactForm />
+        <div className={`Page ${sent ? "Play" : "Five"}`}>
+            <ContactForm sent={sent} setSent={setSent} />
         </div>
 
     )
