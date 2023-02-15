@@ -29,15 +29,15 @@ export const PageOne = () => {
     return (
         <div className="Page One">
             <div className="left">
-                <div className="left-stuff" onClick={handleOpenClick}>
-                    <div id="name">
+                <div className="left-stuff" >
+                    <div id="name" onClick={handleOpenClick}>
                         Richard
                     </div>
-                    <div id="name">
+                    <div id="name" onClick={handleOpenClick}>
                         Kwon
                     </div>
                     <span id="contact-info">
-                        <span>richardkwon5@gmail.com </span><span>| Download CV</span>
+                        <span>richardkwon5@gmail.com </span><a href="./RichardKwon-CV.pdf" target='_blank' rel='noreferrer'>| Download CV</a>
                     </span>
                 </div>
             </div>
