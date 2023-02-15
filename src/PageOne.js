@@ -37,7 +37,7 @@ export const PageOne = () => {
                         Kwon
                     </div>
                     <span id="contact-info">
-                        <span>richardkwon5@gmail.com </span><span>| 408 &#x2022; 963 &#x2022; 7045</span>
+                        <span>richardkwon5@gmail.com </span><span>| Download CV</span>
                     </span>
                 </div>
             </div>

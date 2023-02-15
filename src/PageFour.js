@@ -1,4 +1,7 @@
 import { useState } from "react"
+import BnB from "./ProjectPreviews/BnB"
+import Hard from "./ProjectPreviews/Hard"
+import UTube from "./ProjectPreviews/uTube"
 
 
 export const PageFour = () => {
@@ -12,9 +15,9 @@ export const PageFour = () => {
     const [bnb, setBnB] = useState(false)
 
     const sources = {
-        "uTube": "https://utube-bbn0.onrender.com/",
-        "Hard": "https://hard.onrender.com/",
-        "BnB": "https://bnb-cdd6.onrender.com/"
+        "uTube": "uTube",
+        "Hard": "Hard",
+        "BnB": "BnB"
     }
 
     const handleUTubeClick = (e) => {
@@ -105,9 +108,10 @@ export const PageFour = () => {
     //     setHide(true)
     // }
 
+
     return (
         <div className="Page Four">
-        {/* <div className="Page Four" onClick={handleExitClick}> */}
+            {/* <div className="Page Four" onClick={handleExitClick}> */}
             <div className="left">
                 <div className="left-stuff">
                     <div id="left-title">
@@ -118,7 +122,7 @@ export const PageFour = () => {
             <div className="right">
                 <div className="right-stuff">
                     <div className="right-stuff-items">
-                        <span  onClick={handleUTubeClick} className="preview-links">uTube</span>
+                        <span onClick={handleUTubeClick} className="preview-links">uTube</span>
                         <div>YouTube clone</div>
                         <div className="project-links"><a href="https://utube-bbn0.onrender.com/" target="_blank" rel="noreferrer">Project link</a>&nbsp;&nbsp;<a href="https://www.youtube.com/" target="_blank" rel="noreferrer">Original Site</a>&nbsp;&nbsp;<a href="https://github.com/Ykk2/YouTube-Clone" target="_blank" rel="noreferrer">GitHub</a></div>
                     </div>
@@ -134,10 +138,17 @@ export const PageFour = () => {
                     </div>
                 </div>
                 <div className={`preview-container ${hide ? "hide" : "show"}`}>
-                    <iframe
-                        title="preview"
-                        src={source ? source : undefined}>
-                    </iframe>
+                    <div className="site-previews">
+                        {
+                            source === 'uTube' ?
+                            <UTube />
+                            :
+                            source === 'BnB' ?
+                            <BnB />
+                            :
+                            <Hard />
+                        }
+                    </div>
                 </div>
             </div>
         </div>

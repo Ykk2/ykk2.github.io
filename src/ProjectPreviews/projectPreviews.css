@@ -1,0 +1,67 @@
+.uTube-Preview {
+    height: 100%;
+    width: 100%;
+}
+
+
+.preview-contents {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.preview-contents-top {
+    display: flex;
+    flex-direction: row;
+    height: 33%;
+    width: 100%;
+}
+
+.preview-contents-middle {
+    display: flex;
+    flex-direction: row;
+    height: 33%;
+    width: 100%;
+
+}
+
+.preview-contents-bottom {
+    display: flex;
+    flex-direction: row;
+    height: 33%;
+    width: 100%;
+
+}
+
+
+.preview-contents-image-container {
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-contents-image-container > img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.preview-contents-info-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-contents > * {
+    font-family: Roboto-Thin;
+    color: white;
+}
